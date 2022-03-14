@@ -1,0 +1,87 @@
+<html>
+<head>
+<title>Buy</title>
+<link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+<div class="container">
+<div class="main">
+<h2>Fill your data</h2>
+<form id="form_id" method="post" name="myform">
+<label>Cost of goods :</label>
+<input type="text" name="cost" id="cost" disabled="true" />
+<label>Ph Number :</label>
+<input type="text" name="userph" id="userph"/>
+<label>Address :</label>
+<textarea rows="4" cols="35" id="mail"> </textarea>
+<fieldset><legend>Choice Payment System</legend>
+
+<input type="radio"  name="isp" id="isp1" value="ooredoo" checked="checked" onclick="func()" >Ooredoo
+<input type="radio" name="isp" id="isp2" value="Telenor" onclick="func()" >Telenor
+<input type="radio"  name="isp" id="isp3" value="Mytel" onclick="func()" >Mytel
+<input type="radio" name="isp" id="isp4" value="Mpt" onclick="func()" >Mpt
+<input type="radio" name="isp" id="isp5" value="wmoney" onclick="func()" >Wave Money
+</fieldset>
+<fieldset><legend>For wave money</legend>
+<label>Wave Money ID :</label>
+<input type="text" name="wmid" id="wmid" disabled="true" />
+<label>Wave Money Password :</label>
+<input type="password" name="wmpw" id="wmpw" disabled="true" />
+</fieldset>
+<input type="button" value="BUY" id="submit" onclick="func2()"/>
+</form>
+</div>
+</div>
+</body>
+<script type="text/javascript">
+	var s1=window.sessionStorage.getItem("check");
+ document.getElementById("cost").value="$"+s1;
+	
+	function func(){
+		var ch=document.getElementById("isp5").checked;
+if(ch){
+	document.getElementById("wmid").disabled=false;
+
+document.getElementById("wmpw").disabled=false;
+
+}else{
+document.getElementById("wmid").disabled=true;
+document.getElementById("wmid").value="";
+
+document.getElementById("wmpw").disabled=true;
+document.getElementById("wmpw").value="";
+}
+
+}
+function func2(){
+	var ph=document.getElementById("userph").value;
+	var mail=document.getElementById("mail").value;
+	var ch=document.getElementById("isp5").checked;
+
+	var patternph=/[0-9]{11}/;
+	var patternpass=/[0-9]{6}/;
+	var b=true;
+	if(ph==""||mail==""||!patternph.test(ph)){
+alert("Please fill valid your Ph number and Address");
+b=false;
+}
+
+if(ch){
+if(document.getElementById("wmid").value==""||document.getElementById("wmpw")==""){
+alert("Please fill WaveMoney id and Password");
+b=false;
+}else if(!patternpass.test(document.getElementById("wmpw").value))
+	{
+		alert("Invalid password");
+		b=false;
+	}
+}
+if(b){
+	alert("Thank for bought our books and we will shipment book to your address in three day.");
+ 	window.location="index.html";
+}
+
+}
+
+</script>
+</html>

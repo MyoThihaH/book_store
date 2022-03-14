@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>database</title>
+	<style type="text/css">
+		
+		body{background-image: url(aa.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+
+		}
+		h2{font-size: 40px;
+			font-style: italic;
+			color: white;}
+
+		figcaption{color:white;}
+
+		input[type=button]{
+font-size: 15px;
+background: linear-gradient(#ffbc00 20%, #ffdd7f 80%);
+border: 1px solid black;
+color: black;
+font-weight: bold;
+cursor: pointer;
+width: 100px;
+border-radius: 5px;
+padding: 5px;
+
+}
+		
+input[type=button]:hover{
+background: linear-gradient(#ffdd7f 20%, #ffbc00 80%);
+}
+	table{background-color: black;
+		opacity: 0.8;}	
+	</style>
+</head>
+<body>
+<center>
+
+	<h2 class="aa">Database</h2>
+
+	
+<table border="1" id="table">
+	<tr>
+		<td>
+			<figure>
+
+	<img src="../image/sql1.jpg" width="150" height="200">
+
+<center>
+		
+
+		<figcaption>$4</figcaption>
+
+		<input type="checkbox" name="a" id="1" value="4">
+
+</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+	<img src="../image/sql2.jpg" width="150" height="200">
+
+	<center>
+
+		
+
+		<figcaption>$3</figcaption>
+
+		<input type="checkbox" name="a" id="b" value="3">
+	</center>
+			</figure>
+	</td>
+	<td>
+			<figure>
+
+	<img src="../image/sql3.jpg" width="150" height="200">
+
+	<center>
+		
+
+		<figcaption>$4</figcaption>
+
+		<input type="checkbox" name="a" id="c" value="4">
+	</center>
+			</figure>
+	</td>
+		</tr>
+	<tr>
+		<td>
+			<figure>
+
+<img src="../image/sql4.jpg" width="150" height="200">
+	<center>
+		
+
+		<figcaption>$5</figcaption>
+
+<input type="checkbox" name="a" id="d" value="5">
+
+	</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+<img src="../image/sql5.jpg" width="150" height="200">
+
+	<center>
+		
+
+		<figcaption>$7</figcaption>
+
+		<input type="checkbox" name="a" id="e" value="7">
+
+	</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+<img src="../image/sql6.jpg" width="150" height="200">
+
+	<center>
+	
+
+		<figcaption>$8</figcaption>
+
+		<input type="checkbox" name="a" id="f" value="8">
+
+	</center>
+			</figure>
+	</td>
+		</tr>
+	<tr>
+		<td>
+			<figure>
+
+<img src="../image/sql7.jpg" width="150" height="200">
+
+	<center>
+		
+
+		<figcaption>$9</figcaption>
+
+<input type="checkbox" name="a" id="g" value="9">
+
+	</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+<img src="../image/sql8.jpg" width="150" height="200">
+
+	<center>
+		
+
+		<figcaption>$4</figcaption>
+
+		<input type="checkbox" name="a" id="h" value="4">
+
+	</center>
+			</figure>
+	</td>
+	<td>
+			<figure>
+
+<img src="../image/sql9.jpg" width="150" height="200">
+
+	<center>
+		
+
+		<figcaption>$6</figcaption>
+
+		<input type="checkbox" name="a" id="i" value="6">
+
+	</center>
+
+
+			</figure>
+	</td>
+		</tr>
+	</center>
+
+</table>
+<br>
+<br>
+
+	<form>
+
+		<input type="button" id="sub1" value="Home" onclick="home()">
+
+		<input type="button" id="sub1" value="Buy" onclick="buy()">
+		
+		<input type="button" id="sub1" value="Next" onclick="next()">
+	
+	</form>
+<script type="text/javascript">
+	
+
+function home(){
+window.location.href="../index.html";
+	
+}
+function buy(){
+
+	var res=0;
+	var table=document.getElementById("table");
+
+	var a=table.getElementsByTagName("INPUT");
+	for(var i=0;i<a.length;i++){
+		if(a[i].checked){
+		var val=parseInt(a[i].value);
+		res+=val;
+		}
+	}
+	
+window.sessionStorage.setItem("check",res);
+	window.location="../buy.html";
+}
+function next(){
+	window.location.href="../free/programming.html";
+	
+}
+</script>
+
+
+</body>
+</html>

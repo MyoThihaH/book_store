@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>photoshop</title>
+	<style type="text/css">
+		
+		body{background-image: url(e.jpg);
+			background-size: cover;
+			background-attachment: fixed;
+		}
+		h2{font-size: 40px;
+			font-style: italic;
+			color: white;}
+
+		figcaption{color:white;}
+		
+		input[type=button]{
+font-size: 15px;
+background: linear-gradient(#ffbc00 20%, #ffdd7f 80%);
+border: 1px solid black;
+color: black;
+font-weight: bold;
+cursor: pointer;
+width: 100px;
+border-radius: 5px;
+padding: 5px;
+
+}
+		
+input[type=button]:hover{
+background: linear-gradient(#ffdd7f 20%, #ffbc00 80%);
+}
+table{background-color: black;
+		opacity: 0.8;}	
+	</style>
+</head>
+<body>
+<center>
+
+	<h2 class="aa">Video Editing & Photoshop</h2>
+
+	
+<table border="1" id="table">
+	<tr>
+		<td>
+			<figure>
+
+	<a href="../pdf/shop/s1.pdf"><img src="../image/photo1.jpg" width="150" height="200"></a>
+
+<center>
+
+		<figcaption>$5</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="5">
+
+</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+	<a href="../pdf/shop/s2.pdf"><img src="../image/photo2.jpg" width="150" height="200"></a>
+
+	<center>
+
+
+		<figcaption>$4</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="4">
+	</center>
+			</figure>
+	</td>
+	<td>
+			<figure>
+
+	<a href="../pdf/shop/s3.pdf"><img src="../image/photo3.jpg" width="150" height="200"></a>
+
+	<center>
+
+		<figcaption>$9</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="9">
+	</center>
+			</figure>
+	</td>
+		</tr>
+	<tr>
+		<td>
+			<figure>
+
+<a href="../pdf/shop/s4.pdf"><img src="../image/photo4.jpg" width="150" height="200"></a>
+	<center>
+
+		<figcaption>$7</figcaption>
+
+<input type="checkbox" name="a" id="a" value="7">
+
+	</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+<a href="../pdf/shop/s5.pdf"><img src="../image/photo5.jpg" width="150" height="200"></a>
+
+	<center>
+
+		<figcaption>$8</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="8">
+
+	</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+<a href="../pdf/shop/s6.pdf"><img src="../image/photo6.jpg" width="150" height="200"></a>
+
+	<center>
+
+		<figcaption>$6</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="6">
+
+	</center>
+			</figure>
+	</td>
+		</tr>
+	<tr>
+		<td>
+			<figure>
+
+<a href="../pdf/shop/s7.pdf"><img src="../image/photo7.jpg" width="150" height="200"></a>
+
+	<center>
+
+		<figcaption>$5</figcaption>
+
+<input type="checkbox" name="a" id="a" value="5">
+
+	</center>
+			</figure>
+	</td>
+
+	<td>
+			<figure>
+
+<a href="../pdf/shop/s8.pdf"><img src="../image/photo8.jpg" width="150" height="200"></a>
+
+	<center>
+
+		<figcaption>$4</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="4">
+
+	</center>
+			</figure>
+	</td>
+	<td>
+			<figure>
+
+<a href="../pdf/shop/s9.pdf"><img src="../image/photo9.jpg" width="150" height="200"></a>
+
+	<center>
+
+		<figcaption>$3</figcaption>
+
+		<input type="checkbox" name="a" id="a" value="3">
+
+	</center>
+
+
+			</figure>
+	</td>
+		</tr>
+	</center>
+
+</table>
+<br>
+<br>
+
+	<div>
+		<input type="button" id="sub1" value="Back" onclick="back()">
+
+		<input type="button" id="sub1" value="Home" onclick="home()">
+
+		<input type="button" id="sub1" value="Buy" onclick="buy()">
+		
+		<input type="button" id="sub1" value="Next" onclick="next()">
+	</div>
+
+<div>
+	<script type="text/javascript">
+	
+function back(){
+	window.location.href="../pro/hardware.html";
+	
+}
+function home(){
+	window.location.href="../index.html";
+	
+}
+function buy(){
+
+	var res=0;
+	var table=document.getElementById("table");
+
+	var a=table.getElementsByTagName("INPUT");
+
+	for(var i=0;i<a.length;i++){
+		if(a[i].checked){
+		var val=parseInt(a[i].value);
+		res+=val;
+		}
+	}
+	
+window.sessionStorage.setItem("check",res);
+	window.location="../buy.html";
+}
+function next(){
+	window.location.href="../pro/microsoftOffice.html";
+	
+}
+</script>
+
+</div>
+
+</body>
+</html>
